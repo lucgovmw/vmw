@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><alertContent>
+    <SymptomDefinitions>
+        <SymptomDefinition adapterKind="PingAdapter" disableInBasePolicy="true" id="SymptomDefinition-4c713eb6-ddc4-4480-9045-5e83dc05db9a" name="IP Peak Packet Loss(%)" resourceKind="ip_type">
+            <State severity="critical">
+                <Condition key="peak_packet_loss" operator="&gt;=" thresholdType="static" type="metric" value="100.0" valueType="numeric"/>
+            </State>
+        </SymptomDefinition>
+        <SymptomDefinition adapterKind="PingAdapter" cancelCycle="3" disableInBasePolicy="true" id="SymptomDefinition-fa81ca6e-fcd6-4781-a17c-f2b32ef04caf" name="IP Packet Loss 10%" resourceKind="ip_type" waitCycle="3">
+            <State severity="warning">
+                <Condition key="peak_packet_loss" operator="&gt;" thresholdType="static" type="metric" value="10.0" valueType="numeric"/>
+            </State>
+        </SymptomDefinition>
+        <SymptomDefinition adapterKind="PingAdapter" disableInBasePolicy="true" id="SymptomDefinition-8dffc132-2396-480d-831e-1057bc9d6b4e" name="IP Peak Packet Loss 50%" resourceKind="ip_type">
+            <State severity="immediate">
+                <Condition key="peak_packet_loss" operator="&gt;" thresholdType="static" type="metric" value="50.0" valueType="numeric"/>
+            </State>
+        </SymptomDefinition>
+    </SymptomDefinitions>
+</alertContent>
